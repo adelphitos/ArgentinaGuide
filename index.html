@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Welcome to My Country</title>
+<meta name="description" content="Mia's guide to Argentina for international friends: where to eat in Buenos Aires, barrios to explore, nights out, and trips around the country.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Welcome to My Country">
+<meta property="og:description" content="Mia's guide to Buenos Aires and Argentina, with real photos.">
+<meta property="og:image" content="images/mia-hero-diagonal-obelisco.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2375aadb'/%3E%3Crect y='33' width='100' height='34' fill='%23fff'/%3E%3Ccircle cx='50' cy='50' r='11' fill='%23e9a50c'/%3E%3C/svg%3E">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: full-bleed photo hero with stamps; cream sheet with rounded top; intro split panel; postcards; sticky tabs; sub-chips; cards */
+:root{
+  --bg:#f4f1e4; --paper:#fbf9f1; --ink:#2b3323; --muted:#5e6552;
+  --celeste:#b9cfea; --celeste-soft:#d6e3f2; --sun:#efe39b; --sun-ink:#7a6413; --sage:#b4c2ad;
+  --line:#ddd7c1; --map-land:#ece7d4; --map-edge:#c8c1a5; --water:#d3e1f0; --meat:#9c3b2c; --veg:#3f6b45;
+  --pill-ink:#2b3323; --foot:#2b3323; --foot-ink:#f4f1e4;
+  --display:"Instrument Serif", "Times New Roman", Georgia, serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#181b14; --paper:#21251c; --ink:#efead8; --muted:#b3b5a0;
+    --celeste:#5e7ea6; --celeste-soft:#253244; --sun:#d9cb74; --sun-ink:#e3d07a; --sage:#3b4535;
+    --line:#353a2c; --map-land:#262b20; --map-edge:#4a5240; --water:#1e2935; --meat:#e07b6a; --veg:#8cc08f;
+    --foot:#101209; --foot-ink:#e8e3cf; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#181b14; --paper:#21251c; --ink:#efead8; --muted:#b3b5a0;
+  --celeste:#5e7ea6; --celeste-soft:#253244; --sun:#d9cb74; --sun-ink:#e3d07a; --sage:#3b4535;
+  --line:#353a2c; --map-land:#262b20; --map-edge:#4a5240; --water:#1e2935; --meat:#e07b6a; --veg:#8cc08f;
+  --foot:#101209; --foot-ink:#e8e3cf; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.label,.eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+
+/* Top bar + hero */
+.topbar{background:var(--celeste);color:#2b3323;text-align:center;font-size:.74rem;letter-spacing:.06em;padding:6px 16px}
+.hero{position:relative;min-height:clamp(540px,92vh,880px);display:flex;flex-direction:column;color:#fff;overflow:hidden;background:#8aa0b8}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 68%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,16,.42) 0%,rgba(20,24,16,.08) 30%,rgba(20,24,16,.10) 60%,rgba(20,24,16,.38) 100%);pointer-events:none}
+.hero-nav{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-block:18px;width:100%}
+.hero-nav .links{display:flex;gap:22px;font-size:.86rem;font-weight:500}
+.hero-nav .links a{text-decoration:none}.hero-nav .links a:hover{text-decoration:underline}
+.brand{font-family:var(--display);font-size:1.7rem;line-height:1;text-shadow:0 1px 10px rgba(0,0,0,.3)}
+.brand em{opacity:.85}
+.hero-copy{position:relative;z-index:2;margin:auto;text-align:center;padding:40px 16px 120px;max-width:900px}
+.hero .eyebrow{color:#fff;opacity:.95;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(3.2rem,9vw,6.4rem);line-height:.95;letter-spacing:-.01em;margin:.18em 0 .3em;text-wrap:balance;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+h1 em{font-style:italic}
+.pill{display:inline-block;background:var(--sun);color:var(--pill-ink);font:600 .74rem var(--body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:999px;padding:14px 46px;border:0;cursor:pointer}
+.pill:hover{filter:brightness(.96)}
+.stamps{position:absolute;z-index:2;right:max(16px,3vw);top:90px;display:flex;flex-direction:column;gap:16px;align-items:center}
+.stamps svg{display:block;filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))}
+.hero > .credit{z-index:3}
+
+/* Cream sheet that overlaps the hero */
+.sheet{position:relative;z-index:3;background:var(--bg);border-radius:32px 32px 0 0;margin-top:-34px;padding-top:44px}
+.intro-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:6px 24px;margin-bottom:22px}
+.intro-head h2{font-size:clamp(2.2rem,5vw,3.2rem)}
+.intro-head p{margin:0;color:var(--muted);font-size:.92rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+.split .panel{background:var(--celeste-soft);border-radius:6px;padding:clamp(28px,5vw,64px) clamp(20px,4vw,56px);display:flex;flex-direction:column;justify-content:center;text-align:center}
+.split .panel .label{margin-bottom:18px}
+.lede{font-family:var(--display);font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.18;margin:0;color:var(--ink);text-wrap:pretty}
+.split .shot{min-height:420px;border-radius:6px;background:var(--sage)}
+.postcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:0 0 8px}
+.postcards figure{margin:0}
+.postcards .ph{aspect-ratio:4/5;border-radius:6px;background:var(--sage)}
+.postcards figcaption{font-family:var(--display);font-size:1.35rem;line-height:1.15;margin-top:10px}
+.postcards figcaption small{display:block;font:500 .8rem var(--body);color:var(--muted);margin-top:2px}
+
+/* Tabs */
+.tabs-shell{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-top:34px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.tabs{display:flex;gap:10px;padding-block:14px;overflow-x:auto;scrollbar-width:none}
+.tab,.chip{flex:none;font:600 .74rem var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:11px 22px;cursor:pointer}
+.tab:hover,.chip:hover{border-color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--sun);color:var(--pill-ink);border-color:var(--sun)}
+.chip{font-size:.7rem;padding:9px 16px}
+.chip[aria-pressed="true"]{background:var(--celeste-soft);border-color:var(--celeste-soft)}
+.chip.big{font-size:.74rem;padding:11px 20px}
+.chip.big[aria-pressed="true"]{background:var(--sun);border-color:var(--sun);color:var(--pill-ink)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+main{padding-block:30px 72px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.panel-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 20px;margin-bottom:16px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4.4vw,2.8rem);margin:0;line-height:1.05;letter-spacing:-.005em}
+.panel-head p{margin:0;color:var(--muted);max-width:60ch;font-size:.92rem}
+.tip{font-size:.93rem;background:var(--celeste-soft);border-radius:6px;padding:18px 22px;margin:0 0 30px;max-width:900px}
+.tip p{margin:.35em 0}
+.tip b{font-weight:600}
+
+.group{margin-bottom:40px}
+.group > h3{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 18px}
+.place{display:flex;flex-direction:column;gap:4px;min-width:0}
+.place .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-top:6px}
+.place h4{font-family:var(--display);font-weight:400;font-size:1.5rem;margin:0;line-height:1.05}
+.price{font-size:.8rem;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
+.where{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.place p{margin:2px 0 0;font-size:.9rem;color:var(--ink)}
+.range{font-size:.82rem;font-weight:600;color:var(--sun-ink);font-variant-numeric:tabular-nums}
+.gnote{margin:-6px 0 16px;color:var(--muted);font-size:.92rem;max-width:70ch}
+.tip .pnote{font-size:.82rem;color:var(--muted)}
+.plinks{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.plinks a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}.plinks a:hover{border-color:var(--ink)}
+
+/* Photo boxes (painted gradient stays underneath as a loading/fallback color) */
+.cover{position:relative;border-radius:6px;overflow:hidden;min-height:150px;display:flex;align-items:flex-end;padding:18px 20px;color:#fff;margin-bottom:16px}
+.cover h3{font-family:var(--display);font-weight:400;font-size:clamp(2rem,5vw,3.2rem);margin:0;line-height:1;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.cover small{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;opacity:.95;text-shadow:0 1px 6px rgba(0,0,0,.4);margin-bottom:4px}
+.cover .photos,.thumb > a{position:absolute;z-index:3;background:rgba(251,249,241,.92);color:#2b3323;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;border-radius:999px;text-decoration:none}
+.cover .photos{top:14px;right:14px;padding:7px 13px}
+.thumb > a{right:10px;bottom:10px;padding:5px 10px;opacity:0;transition:opacity .18s}
+.place:hover .thumb > a,.thumb:focus-within > a{opacity:1}
+.cover .photos:hover,.thumb > a:hover{background:#fff}
+.thumb{aspect-ratio:4/4.4;border-radius:6px;position:relative;background:var(--sage)}
+.sc-glacier{background:linear-gradient(180deg,#9fc8ea 0%,#dff0fb 45%,#7fb3d9 46%,#c9e6f6 62%,#2f5f86 100%)}
+.sc-fitz{background:linear-gradient(160deg,#f2a65a 0%,#e46f4b 30%,#5b4b6b 55%,#2b3a55 100%)}
+.sc-lakes{background:linear-gradient(180deg,#9cc9e8 0%,#c7e2f3 40%,#3d6e4f 41%,#2c5a76 70%,#1d3f5c 100%)}
+.sc-ushuaia{background:linear-gradient(180deg,#7d97b8 0%,#d8e2ee 38%,#4a5d75 39%,#26384f 100%)}
+.sc-whale{background:linear-gradient(180deg,#d8c9a6 0%,#e9dcbc 35%,#3f7aa0 36%,#1e4b6d 100%)}
+.sc-north{background:linear-gradient(180deg,#a6cbe6 0%,#d7a35b 38%,#c15a3b 55%,#7b3c5c 75%,#4f7a54 100%)}
+.sc-salt{background:linear-gradient(180deg,#5ea2d6 0%,#b7dbf2 45%,#f6f8fb 46%,#e3e8ee 100%);color:#14233f}
+.sc-iguazu{background:linear-gradient(180deg,#2f6a3e 0%,#4f8f53 25%,#e9f2f2 26%,#cfe3e6 55%,#8c6b47 56%,#4c3a28 100%)}
+.sc-wine{background:linear-gradient(180deg,#b6cfe6 0%,#e8eef4 30%,#8f8f9b 31%,#5b6b4a 55%,#6b1f37 100%)}
+.sc-rosario{background:linear-gradient(180deg,#75aadb 0 33%,#ffffff 33% 66%,#75aadb 66% 100%);color:#14233f}
+.sc-rosario h3,.sc-salt h3{text-shadow:none}
+.sc-rosario small,.sc-salt small{text-shadow:none}
+.sc-night{background:radial-gradient(circle at 20% 30%,#ff4fa3 0 8%,transparent 30%),radial-gradient(circle at 80% 20%,#4fd2ff 0 6%,transparent 28%),linear-gradient(180deg,#160c2e,#0b0618)}
+.sc-food{background:var(--sage)}
+
+.dest p.intro{max-width:70ch;margin:0 0 20px;font-size:1.02rem}
+.when{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0 0 26px}
+.when div{background:var(--celeste-soft);border-radius:6px;padding:14px 16px}
+.when b{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+.route{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:18px}
+.route > li{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:24px;background:var(--paper);border-radius:6px;padding:16px}
+.route .cover{min-height:230px;margin:0}
+.route h4{font-family:var(--display);font-weight:400;font-size:2rem;line-height:1.05;margin:2px 0 6px}
+.route .days{font-size:.7rem;font-weight:600;color:var(--sun-ink);letter-spacing:.16em;text-transform:uppercase}
+.route ul{margin:10px 0 0;padding-left:18px}
+.route li li{margin-bottom:3px}
+.letter{background:var(--celeste-soft);border-radius:6px;padding:clamp(24px,5vw,48px);margin-bottom:24px;text-align:center;font-family:var(--display);font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.2}
+.letter p{margin:.4em auto;max-width:34ch}
+.letter .sig{font-style:italic}
+
+/* Night timeline */
+.night{list-style:none;margin:0 0 34px;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.night li{background:var(--paper);border-radius:6px;padding:18px;min-width:0}
+.night .t{font-variant-numeric:tabular-nums;font-weight:600;color:var(--sun-ink);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.night h4{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.05;margin:4px 0 8px}
+.night p{margin:0;font-size:.92rem}
+
+/* Explore */
+.barrio{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:30px;align-items:start}
+.mapbox{background:var(--paper);border-radius:6px;padding:14px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px)}
+.mapbox svg{width:100%;height:auto;display:block}
+.mapcap{font-size:.76rem;color:var(--muted);margin-top:8px}
+.barrio .bname{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,5vw,3.2rem);margin:0 0 6px;line-height:1}
+.vibe{color:var(--muted);margin:0 0 18px;max-width:60ch}
+.sights{display:grid;gap:12px;list-style:none;margin:0;padding:0}
+.sights li{background:var(--paper);border-radius:6px;padding:12px;display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.sights li > b{font-family:var(--display);font-weight:400;font-size:1.45rem;line-height:1.1}
+.sights li > span{grid-column:2/3;font-size:.92rem;color:var(--muted)}
+.sights .sthumb{grid-row:1/3;grid-column:1;align-self:center;height:104px;border-radius:4px;background:var(--sage)}
+.sights .lk{grid-row:1/3;grid-column:3;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;display:flex;flex-direction:column;gap:6px;text-align:right}
+.sights .lk a{text-decoration:none;white-space:nowrap}.sights .lk a:hover{text-decoration:underline}
+.apps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.apps li{background:var(--paper);border-radius:6px;padding:16px 18px}
+.apps .logo{display:flex;align-items:center;justify-content:center;height:84px;background:#fff;border-radius:4px;margin-bottom:12px;padding:16px}
+.apps .logo img{max-height:52px;max-width:70%;display:block}
+.apps b{display:block;font-family:var(--display);font-weight:400;font-size:1.45rem;line-height:1.1;margin-bottom:4px}
+.apps span{font-size:.92rem;color:var(--muted)}
+.safety{margin-top:18px;font-size:.92rem;background:var(--celeste-soft);border-radius:6px;padding:14px 18px}
+
+.ph{position:relative;overflow:hidden}
+.ph > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0}
+.cover.ph{color:#fff}
+.cover.ph::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,24,16,.10) 0%,rgba(20,24,16,0) 35%,rgba(20,24,16,.55) 100%)}
+.cover.ph > div{position:relative;z-index:2}
+.cover.ph h3,.cover.ph small{text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.cover.ph.big{min-height:clamp(260px,40vw,440px)!important}
+.credit{position:absolute;z-index:4;top:8px;left:8px;max-width:calc(100% - 16px);font:500 .68rem/1.3 var(--body);letter-spacing:0;text-transform:none;color:#fff;background:rgba(20,24,16,.78);padding:3px 8px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .18s;text-shadow:none}
+.credit a{color:#fff;text-decoration:underline}
+.ph:hover > .credit,.ph:focus-within > .credit,.ph.show > .credit{opacity:1;pointer-events:auto}
+.cover.ph .credit,.hero > .credit{top:auto;bottom:46px;left:auto;right:12px;max-width:60%}
+.hero:hover > .credit{opacity:1;pointer-events:auto}
+
+footer{background:var(--foot);color:var(--foot-ink);padding-block:40px 48px;font-size:.88rem}
+footer .brand{display:block;font-size:2rem;margin-bottom:10px;text-shadow:none}
+footer a{font-weight:600}
+
+@media (max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.night{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}
+  .split,.barrio{grid-template-columns:1fr}
+  .split .shot{min-height:340px}
+  .postcards{grid-template-columns:1fr 1fr}.postcards figure:last-child{grid-column:1/-1}.postcards figure:last-child .ph{aspect-ratio:4/3}
+  .stamps{top:auto;bottom:56px;right:12px;flex-direction:row;gap:8px}.stamps svg{width:64px;height:64px}
+  .hero-nav{grid-template-columns:1fr auto}.hero-nav .links{display:none}.hero-nav .brand{justify-self:start}
+  .mapbox{position:static;max-width:380px}
+  .route > li{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .grid,.night{grid-template-columns:1fr}
+  .place h4{font-size:1.6rem}
+  .thumb{aspect-ratio:4/3}
+  .sights li{grid-template-columns:1fr}.sights li > span{grid-column:auto}.sights .sthumb{grid-row:auto;grid-column:auto;height:190px;margin-bottom:6px}
+  .sights .lk{grid-row:auto;grid-column:auto;flex-direction:row;gap:16px;text-align:left}
+  .postcards{grid-template-columns:1fr}.postcards .ph,.postcards figure:last-child .ph{aspect-ratio:4/4.4}
+  .hero-copy{padding-bottom:150px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">A friend's guide to Buenos Aires and Argentina · Made in Argentina</div>
+<header class="hero">
+  <img class="hero-img" src="images/mia-hero-diagonal-obelisco.webp" width="1080" height="1350" alt="Diagonal Norte lined with purple jacaranda trees, with the Obelisco at the end of the street" fetchpriority="high">
+  <span class="credit">Photo: Mia</span>
+  <nav class="hero-nav wrap" aria-label="Main">
+    <div class="links"><a href="#ba" data-go="ba">Buenos Aires</a><a href="#travel" data-go="travel">Travel Argentina</a><a href="#apps" data-go="apps">Apps</a></div>
+    <span class="brand">Mia's <em>Guide</em></span>
+    <span></span>
+  </nav>
+  <div class="hero-copy">
+    <div class="eyebrow">By Mia, for my Tetr friends · Student budget</div>
+    <h1>Welcome to My <em>Country</em></h1>
+    <a class="pill" href="#explore" data-go="ba">Start exploring</a>
+  </div>
+  <div class="stamps" aria-hidden="true">
+    <svg width="84" height="84" viewBox="0 0 100 100"><defs><path id="st1" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"/></defs><circle cx="50" cy="50" r="48" fill="#b9cfea"/><circle cx="50" cy="50" r="44" fill="none" stroke="#2b3323" stroke-width="1.2"/><circle cx="50" cy="50" r="27" fill="none" stroke="#2b3323" stroke-width="1"/><text font-family="Figtree,sans-serif" font-size="9.5" font-weight="700" letter-spacing="2.2" fill="#2b3323"><textPath href="#st1">BUENOS AIRES · ARGENTINA ·</textPath></text><g fill="#c9a227" stroke="#7a6413" stroke-width=".6"><circle cx="50" cy="50" r="9"/></g><g stroke="#7a6413" stroke-width="2" stroke-linecap="round"><path d="M50 31v6M50 63v6M31 50h6M63 50h6M36.6 36.6l4.2 4.2M59.2 59.2l4.2 4.2M36.6 63.4l4.2-4.2M59.2 40.8l4.2-4.2"/></g></svg>
+    <svg width="84" height="84" viewBox="0 0 100 100"><defs><path id="st3" d="M50,50 m-35,0 a35,35 0 1,1 70,0 a35,35 0 1,1 -70,0"/></defs><circle cx="50" cy="50" r="48" fill="#2b3323"/><circle cx="50" cy="50" r="44" fill="none" stroke="#efe39b" stroke-width="1"/><text font-family="Figtree,sans-serif" font-size="9" font-weight="700" letter-spacing="2.6" fill="#efe39b"><textPath href="#st3">MADE BY MIA · FOR FRIENDS ·</textPath></text><text x="50" y="60" text-anchor="middle" font-family="Instrument Serif,serif" font-size="30" fill="#efe39b">M</text></svg>
+  </div>
+</header>
+
+<div class="sheet">
+  <section class="wrap" id="explore">
+    <div class="intro-head"><h2>Like a local, <em>not</em> a tourist.</h2><p>Buenos Aires first, then the rest of the country.</p></div>
+    <div class="split">
+      <div class="panel">
+        <div class="label">The guide to my country</div>
+        <p class="lede">Everything I'd tell you if we were having a coffee: where to eat without paying tourist prices, the barrios you can't miss, how a night out actually works here, and the trips you have to take while you're in Argentina.</p>
+      </div>
+      <div class="shot ph"><img src="images/mia-puerto-madero-sunset.webp" width="1066" height="1600" alt="Puerto Madero towers and the Puente de la Mujer reflected in the water at sunset" loading="lazy"><span class="credit">Photo: Mia</span></div>
+    </div>
+    <div class="postcards">
+      <figure><div class="ph"><img src="images/mia-downtown-flags.webp" width="900" height="1200" alt="A downtown street with a flower stand and Argentine flags" loading="lazy"><span class="credit">Photo: Mia</span></div><figcaption>Sky blue and white<small>A downtown street, flowers and flags</small></figcaption></figure>
+      <figure><div class="ph"><img src="images/mia-recoleta-floralis.webp" width="667" height="1000" alt="The Facultad de Derecho steps and the Floralis Genérica sculpture in Recoleta" loading="lazy"><span class="credit">Photo: Mia</span></div><figcaption>Recoleta<small>Facultad de Derecho and the Floralis Genérica</small></figcaption></figure>
+      <figure><div class="ph"><img src="images/mia-obelisco-aerial.webp" width="1066" height="1600" alt="Aerial view of the Obelisco and Avenida 9 de Julio at sunset" loading="lazy"><span class="credit">Photo: Mia</span></div><figcaption>The Obelisco<small>Avenida 9 de Julio from above</small></figcaption></figure>
+    </div>
+  </section>
+</div>
+
+<div class="tabs-shell">
+  <div class="wrap">
+    <div class="tabs" role="tablist" aria-label="Sections">
+      <button class="tab" role="tab" id="tab-ba" aria-controls="ba" data-t="ba">Buenos Aires</button>
+      <button class="tab" role="tab" id="tab-travel" aria-controls="travel" data-t="travel">Travel Argentina</button>
+      <button class="tab" role="tab" id="tab-apps" aria-controls="apps" data-t="apps">Apps</button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="ba" role="tabpanel" aria-labelledby="tab-ba">
+    <div class="chips" role="group" aria-label="Buenos Aires section">
+      <button class="chip big" data-ba="eat" aria-pressed="true">Where to eat</button>
+      <button class="chip big" data-ba="explore" aria-pressed="false">Where to explore</button>
+      <button class="chip big" data-ba="night" aria-pressed="false">Night out</button>
+    </div>
+
+    <div id="ba-eat">
+      <div class="panel-head"><h2>Where to eat</h2><p>Pick what you're in the mood for.</p></div>
+      <div class="chips" role="group" aria-label="Food type" id="foodChips"></div>
+      <div class="tip" id="foodTip"></div>
+      <div id="food"></div>
+    </div>
+
+    <div id="ba-explore" hidden>
+      <div class="panel-head"><h2>Where to explore</h2><p>The must-dos, barrio by barrio. The map shows where each one sits in the city.</p></div>
+      <div class="chips" role="group" aria-label="Neighborhood" id="barrioChips"></div>
+      <div id="barrio"></div>
+    </div>
+
+    <div id="ba-night" hidden>
+      <div class="cover ph big sc-night" id="nightCover"><div><small>Thursday to Saturday</small><h3>A night out, the Argentine way</h3></div></div>
+      <p class="intro" style="max-width:70ch;margin:0 0 18px">Fair warning: nobody goes out early here. If you arrive at a club at midnight it will be empty. This is how a normal night goes.</p>
+      <ol class="night">
+        <li><div class="t">10 PM – 1/2 AM</div><h4>La previa</h4><p>Pre-drinks at someone's place. Music, friends, and fernet con Coca (try it at least once). This is half the fun of the night.</p></li>
+        <li><div class="t">1/2 AM</div><h4>Leave for the boliche</h4><p>Take a taxi or an app as a group. Lines are normal; arriving before 1 AM is too early.</p></li>
+        <li><div class="t">2 AM – 6 AM</div><h4>Boliche</h4><p>Dance until closing. Reggaeton and cachengue (Argentine party mix) are everywhere, and electronic music at the big clubs.</p></li>
+        <li><div class="t">6 AM</div><h4>Post-boliche food</h4><p>A McDonald's run, a choripán from a street cart, or a pancho (hot dog). Then sleep until lunch.</p></li>
+      </ol>
+      <div class="group"><h3>Bars for the previa or a calmer night</h3><div class="grid" id="bars"></div></div>
+      <div class="group"><h3>Boliches: the best ones</h3><div class="grid" id="clubs"></div></div>
+      <div class="group"><h3>More boliches</h3><div class="grid" id="clubs2"></div></div>
+      <p class="safety"><b>Tips:</b> bring your ID or passport (they check), keep your phone in a front pocket, and always get home by taxi or app.</p>
+    </div>
+  </section>
+
+  <section id="travel" role="tabpanel" aria-labelledby="tab-travel" hidden>
+    <div class="chips" role="group" aria-label="Destination" id="destChips"></div>
+    <div id="dest"></div>
+  </section>
+  <section id="apps" role="tabpanel" aria-labelledby="tab-apps" hidden>
+    <div class="panel-head"><h2>Apps</h2><p>The ones worth downloading before you land.</p></div>
+    <div class="group"><h3>Getting around</h3><p class="gnote">Uber, Cabify and DiDi are ride apps. Compare them, prices change a lot.</p><ul class="apps"><li><span class="logo"><img src="images/logos/uber.svg" alt="Uber logo" loading="lazy"></span><b>Uber</b></li><li><span class="logo"><img src="images/logos/cabify.svg" alt="Cabify logo" loading="lazy"></span><b>Cabify</b></li><li><span class="logo"><img src="images/logos/didi.svg" alt="DiDi logo" loading="lazy"></span><b>DiDi</b></li><li><span class="logo"><img src="images/logos/moovit.webp" alt="Moovit logo" loading="lazy"></span><b>Moovit</b><span>Public transport app: tells you which bus, subway or train to take to get anywhere.</span></li><li><span class="logo"><img src="images/logos/google-maps.webp" alt="Google Maps logo" loading="lazy"></span><b>Google Maps</b><span>For walking directions and finding places. It also shows bus and subway routes.</span></li></ul></div>
+    <div class="group"><h3>Walking</h3><ul class="apps"><li><span class="logo"><img src="images/logos/pasito.webp" alt="Pasito logo" loading="lazy"></span><b>Pasito</b><span>Free Argentine app that turns your steps into rewards: walk, earn points and trade them for coffee, wine or movie tickets at places around the city.</span></li></ul></div>
+    <div class="group"><h3>Food</h3><ul class="apps"><li><span class="logo"><img src="images/logos/pedidosya.svg" alt="PedidosYa logo" loading="lazy"></span><b>PedidosYa</b><span>Delivery app.</span></li><li><span class="logo"><img src="images/logos/rappi.svg" alt="Rappi logo" loading="lazy"></span><b>Rappi</b><span>Delivery app.</span></li><li><span class="logo"><img src="images/logos/cheaf.webp" alt="Cheaf logo" loading="lazy"></span><b>Cheaf</b><span>Like Too Good To Go: surprise bags of leftover food from supermarkets, bakeries and cafés at half price or less. You pick them up the same day.</span></li></ul></div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span class="brand">Mia's <em>Guide</em></span><a href="credits.html">Photo credits</a></div></footer>
+
+<script src="photos.js?v=20261031v"></script>
+<script>
+(function(){
+  var M=function(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)};
+  var P=function(q){return 'https://www.google.com/search?tbm=isch&q='+encodeURIComponent(q)};
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  var PH=window.PHOTOS||{},PHL={};
+  Object.keys(PH).forEach(function(k){if(!PHL[PH[k].label])PHL[PH[k].label]=PH[k]});
+  function slug(s){return String(s).normalize('NFKD').replace(/[̀-ͯ’']/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}
+  function photo(p,alt,eager){
+    if(!p)return '';
+    var a=p.author.length>60?p.author.slice(0,57)+'…':p.author;
+    return '<img src="'+p.src+'" width="'+p.w+'" height="'+p.h+'" alt="'+esc(alt)+'"'+(eager?'':' loading="lazy"')+' decoding="async">'+
+      '<span class="credit">'+({similar:'Similar place, not the actual one · ',food:'Representative photo · '}[p.kind]||'')+'Photo: '+(p.page?'<a href="'+esc(p.page)+'" target="_blank" rel="noopener">'+esc(a)+'</a>':esc(a))+(p.kind==='owner'?(p.page?' on Instagram':''):' · '+esc(p.license))+'</span>';
+  }
+  function cardKey(it,sec){
+    var s=slug(it.n);
+    if(it.k)return it.k;
+    if(sec==='indian'&&PH['in-'+s])return 'in-'+s;
+    if(sec==='club')return 'club-'+s;
+    return s;
+  }
+  function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e}
+  function card(it,sec){
+    var pk=PH[cardKey(it,sec)];
+    return '<article class="place"><div class="thumb ph sc-food">'+photo(PH[cardKey(it,sec)],it.n)+'<a href="'+P(it.ph||it.q)+'" target="_blank" rel="noopener">Photos ↗</a></div>'+
+      '<div class="top"><h4>'+esc(it.n)+'</h4>'+(it.r?'<span class="price">★ '+it.r+'</span>':(it.p?'<span class="price">'+it.p+'</span>':''))+'</div>'+
+      (it.w?'<span class="where">'+esc(it.w)+'</span>':'')+(it.pr?'<span class="range">'+esc(it.pr)+(/^ARS/.test(it.pr)?' per person':'')+'</span>':'')+(it.d?'<p>'+esc(it.d)+'</p>':'')+
+      '<div class="plinks"><a href="'+M(it.q)+'" target="_blank" rel="noopener">Open in Maps ↗</a>'+((pk&&pk.ig)||it.ig?'<a href="'+esc((pk&&pk.ig)||it.ig)+'" target="_blank" rel="noopener">Instagram ↗</a>':'')+(it.web?'<a href="'+esc(it.web)+'" target="_blank" rel="noopener">Website ↗</a>':'')+(it.fb?'<a href="'+esc(it.fb)+'" target="_blank" rel="noopener">Facebook ↗</a>':'')+'</div></article>';
+  }
+
+  /* ---------- FOOD ---------- */
+  var FOOD={
+    restaurants:{label:'Restaurants',tip:'<p>Places my friends can\'t stop talking about. Argentines eat dinner late (9–10 PM), so book a table for the popular ones.</p><p class="pnote">Prices are approximate, per person, in Argentine pesos (October 2026). They change fast, so check the menu before you go.</p>',groups:[
+      {g:'Where locals are booking right now',items:[
+        {n:'Evelia',ig:'https://www.instagram.com/evelia.restaurante/',w:'Núñez (Belgrano border)',pr:'ARS 35,000–55,000',d:'Really good homemade pasta in a beautiful space where every detail is taken care of. Share the charcuterie board with stracciatella and gnocco fritto, then order the fusilli with ragù and stracciatella or the beef agnolotti with parmesan cream. Save room for the tiramisù. Tuesday to Sunday, 12–3:30 PM and 7:30 PM–midnight. Book ahead.',q:'Evelia, Campos Salles 1712, Buenos Aires'},
+        {n:'Caprichito',w:'Palermo',pr:'ARS 40,000–50,000',d:'Italian-American bodegón from the sisters behind Ti Amo: pasta, pizza and burgers by candlelight. Always full, so book.',q:'Caprichito, Honduras 5684, Buenos Aires'},
+        {n:'Garabato Bistró',w:'Núñez',pr:'ARS 60,000–110,000',d:'Michelin Bib Gourmand neo-bistro, famous for what many call the best fries in the country. Great for a special dinner.',q:'Garabato Bistro, O\'Higgins 3424, Buenos Aires'},
+        {n:'Sandino',w:'Chacarita',pr:'ARS 45,000–70,000',d:'Intimate corner bistro in Chacarita, candlelit tables and white tablecloths. Order lots of small plates to share: the fried beef empanadas, the provoleta and the creamy ricotta with capers. Good cocktails too. Dinner Tuesday to Friday, lunch and dinner on weekends.',q:'Sandino, Olleros 3891, Buenos Aires'},
+        {n:'Lardito',w:'Chacarita',pr:'$$$ (menu not online)',d:'Small plates to share, about 300 wines and triple-fried fries with beet aioli. Perfect for a date. Book on their website.',q:'Lardito, Av. Jorge Newbery 3655, Buenos Aires'},
+        {n:'Tony Wu',w:'Villa Crespo',pr:'ARS 38,000–40,000',d:'Modern Chinese cantina with recipes from different regions of China. Big and generous: share the roast duck.',q:'Tony Wu, Loyola 851, Buenos Aires'},
+        {n:'Ácido',w:'Chacarita',pr:'$$ (Michelin)',d:'Michelin Bib Gourmand with a short, creative menu of plates to share. At lunch, try Olla 7, their bodegón-style kitchen.',q:'Ácido, Charlone 999, Buenos Aires'},
+        {n:'Mad Pasta',w:'Martínez (just north of the city)',r:'4.3',pr:'ARS 45,000–65,000',d:'Lively fresh-pasta house with a big covered terrace, buzzing at night. Start with the focaccia and the mac & cheese croquette, then share pastas like the anolini or the tomato gnocchi with sweetbreads. Portions are on the small side.',q:'Mad house, Av. del Libertador 13797, Martínez'},
+        {n:'Nicky Cheese',w:'Belgrano',r:'4.4',pr:'$$ (menu not online)',d:'American-style diner: pancakes, sandwiches and fries. Delicious but very heavy, so once in a while.',q:'Nicky Cheese, Montañeses 2671, Buenos Aires'}
+      ]},
+      {g:'For a special night',items:[
+        {n:'Uni Omakase',w:'Palermo',pr:'ARS 100,000–130,000',d:'A 14-course chef\'s-choice sushi dinner at the counter, in the Michelin Guide. Book 3–4 weeks ahead.',q:'Uni Omakase, Guatemala 5820, Buenos Aires'},
+        {n:'Acuario Bar',w:'Retiro',pr:'$$ (menu not online)',d:'Natural-wine bar in a modernist building. Glasses of Argentine natural wine and small plates to share.',q:'Acuario Bar, Paraguay 900, Buenos Aires'}
+      ]}
+    ]},
+    fast:{label:'Burgers, pizza & panchos',tip:'<p>Local favorites with their Google rating. Most of them are also on PedidosYa or Rappi.</p><p class="pnote">Prices are approximate, per person, in Argentine pesos (October 2026). They change fast, so check the menu before you go.</p>',groups:[
+      {g:'Burgers',items:[
+        {n:'Keke & Larry',ig:'https://www.instagram.com/kekeylarry/',r:'4.9',w:'Burgers',q:'Keke & Larry, Buenos Aires'},
+        {n:'Austin’s Diner & Grill',r:'4.7',w:'American diner',q:'Austin’s Diner & Grill, Buenos Aires'},
+        {n:'Nicks',r:'4.7',w:'Burgers',q:'Nicks hamburguesas, Buenos Aires'},
+        {n:'Arredondo',ig:'https://www.instagram.com/arredondo.ba/',r:'4.3',w:'Burgers',d:'Over 7,000 reviews: one of the city’s favorites.',q:'Arredondo hamburguesas, Buenos Aires'},
+        {n:'Luisa’s',r:'4.3',w:'Burgers',q:'Luisa’s hamburguesas, Buenos Aires'},
+        {n:'GRASA',r:'4.5',w:'Villa Crespo · Núñez',d:'Smash burgers with lots of cheddar and a whole caramelized onion on top, served on metal trays. Very popular, so expect a wait at night. Second location, GRASA 2, at 11 de Septiembre 3510.',q:'GRASA hamburguesas, Acevedo 986, Buenos Aires'},
+        {n:'GUITA',ig:'https://www.instagram.com/guita.wtf/',r:'4.3',w:'Burgers',pr:'ARS 10,000–20,000',q:'GUITA hamburguesas, Buenos Aires'},
+        {n:'Kiddo',w:'Las Cañitas',pr:'Burgers ARS 9,500–15,500',d:'The youtuber-founded burger spot that made Time Out\'s world ranking. Order The Park. Daily 12–4:30 PM and 7 PM–midnight.',q:'Kiddo, Arévalo 2882, Buenos Aires'},
+        {n:'FINO (Fino y Elegante)',k:'fino',r:'4.7',w:'Colegiales',pr:'Burgers ARS 12,500–16,500',d:'Neighborhood burger spot in Colegiales loved for its double smash burgers: get the Fino (cheddar, pickles and special sauce) or the Crispino with bacon. Gluten-free buns available.',q:'FINO hamburguesas, Moldes, Colegiales, Buenos Aires'},
+        {n:'The Food Truck Store',w:'Palermo · Belgrano',pr:'$$ (menu not online)',d:'Smash burgers like the Oklahoma, plus famous dulce de leche shakes.',q:'The Food Truck Store, Bulnes 2774, Buenos Aires'}
+      ]},
+      {g:'Pizza (fugazzeta is vegetarian and the real classic)',items:[
+        {n:'Güerrín',w:'Corrientes, Centro',p:'$',d:'Thick, cheesy pizza al molde since 1932. Eat a slice standing at the bar like a local.',q:'Pizzería Güerrín, Avenida Corrientes, Buenos Aires'},
+        {n:'Kalis Pizza',ig:'https://www.instagram.com/kalis.pizza/',w:'Núñez',pr:'Slices ARS 6,700–7,600',d:'New-wave pizza by the slice that made it onto world best-pizzeria lists. Evenings only, Wednesday to Sunday.',q:'Kalis Pizza, O\'Higgins 3578, Buenos Aires'},
+        {n:'Las Cuartetas',w:'Corrientes, Centro',p:'$',d:'Huge old pizzeria near the Obelisco. Slightly cheaper than Güerrín on the basics.',q:'Pizzería Las Cuartetas, Avenida Corrientes, Buenos Aires'},
+        {n:'La Mezzetta',w:'Villa Ortúzar',r:'4.6',pr:'ARS 10,000–20,000',d:'Many say it\'s the best stuffed fugazzeta in the city: thick, cheesy and loaded with onion. Old-school pizzeria where you eat standing at the counter, and there\'s often a line.',q:'La Mezzetta, Av. Álvarez Thomas 1321, Buenos Aires'},
+        {n:'El Imperio',w:'Chacarita',pr:'$ (menu not online)',d:'Classic corner pizzeria since 1947, opposite the Chacarita cemetery. Famous for its fugazzeta.',q:'Pizzería El Imperio, Av. Corrientes 6891, Buenos Aires'},
+        {n:'El Fortín',w:'Monte Castro',pr:'Stuffed fugazzeta ARS 22,800 (2025)',d:'Family pizzeria since 1962, with one of the last wood-fired ovens in the city. Try the ricotta cake too.',q:'Pizzería El Fortín, Álvarez Jonte 5299, Buenos Aires'},
+        {n:'Angelín',w:'Villa Crespo',pr:'$ (menu not online)',d:'85 years of pizza canchera (thin, tomato only) and a great fugazzeta.',q:'Pizzería Angelín, Av. Córdoba 5270, Buenos Aires'},
+        {n:'Atte. Pizzeria Napoletana',w:'Palermo Hollywood',pr:'$$ (menu not online)',d:'Neapolitan pizza with a soft, puffy crust. Book to avoid the wait.',q:'Atte Pizzeria Napoletana, El Salvador 6016, Buenos Aires'},
+        {n:'El Cuartito',w:'Retiro / Recoleta',p:'$',d:'Football posters on every wall. Order muzzarella with a slice of fainá on top.',q:'Pizzería El Cuartito, Buenos Aires'}
+      ]},
+      {g:'Panchos & choripán',note:'Panchos are hot dogs; choripán is a grilled chorizo sausage in crusty bread with chimichurri. Any street cart or parrilla al paso makes a great one, but one of the best is at the Mercado de San Telmo.',items:[
+        {n:'Manfred',w:'Villa Devoto',pr:'ARS 10,000–15,000',d:'A fun panchería in Villa Devoto: German-style and Venezuelan hot dogs buried in toppings and grated cheese, with Venezuelan drinks on the side. Go with friends and share a combo.',q:'Manfred, Av. Francisco Beiró 4694, Buenos Aires'},
+        {n:'Choripán at Mercado de San Telmo',k:'choripan-san-telmo',w:'San Telmo',p:'$',d:'Grab a choripán with chimichurri from the stalls inside the historic 1897 iron market, then walk the Sunday fair on Calle Defensa.',q:'Mercado de San Telmo, Defensa 961, Buenos Aires'}
+      ]},
+      {g:'Empanadas',note:'You can order empanadas by the dozen for delivery, and most places (especially bodegones) serve them as a starter. These are a few favorites:',items:[
+        {n:'La Cocina',w:'Centro',p:'$',d:'Catamarca-style empanadas since 1977. Get the spinach and the spicy cheese.',q:'La Cocina empanadas catamarqueñas, Buenos Aires'},
+        {n:'El Sanjuanino',w:'Recoleta',p:'$',d:'A Recoleta classic. Fried or baked; the spinach and corn ones are excellent.',q:'El Sanjuanino Recoleta, Buenos Aires'},,
+        {n:'Mi Gusto',ig:'https://www.instagram.com/migustoar/',w:'Many locations',d:'Empanada chain with lots of creative fillings and dipping sauces. Easy for a group order: get a box to share.',q:'Mi Gusto empanadas, Buenos Aires'}
+      ]}
+    ]},
+    cafes:{label:'Coffee & merienda',tip:'<p>Specialty coffee, bakeries and brunch: a local friend\'s list, with Google ratings. Merienda (afternoon coffee with something sweet, around 5 PM) is a ritual here, so try it at least once with medialunas.</p><p class="pnote">Prices are approximate, per person, in Argentine pesos (October 2026). They change fast, so check the menu before you go.</p>',groups:[
+      {g:'Must go',items:[
+        {n:'Oli Café',r:'4.2',w:'Palermo Hollywood',d:'My favorite café in the city. Bright, simple and always full: come for a flat white and the brûléed French toast with fruit. Closed on Tuesdays; go early on weekends.',q:'Oli Café, Costa Rica 6020, Buenos Aires'},
+        {n:'Rita Specialty Coffee',r:'4.8',w:'Soler',d:'Almost 12,000 reviews and still a 4.8: cozy leather booths and big breakfast plates. In my opinion, though, it\'s not really worth what it costs.',q:'Rita Specialty Coffee Soler, Buenos Aires'},
+        {n:'Canillita Café',r:'4.7',w:'Recoleta · Centro · Palermo',pr:'Up to ARS 10,000',d:'Specialty coffee from an old newspaper stand. Get the pistachio alfajor, and pay cash for a discount. Stands on Junín 926, Uruguay 627, Av. Santa Fe 702 and Figueroa Alcorta 2151.',q:'Canillita Café, Junín 926, Buenos Aires'}
+      ]},
+      {g:'Specialty coffee',items:[
+        {n:'KISSATEN Tostador',r:'4.8',w:'Coffee shop',q:'Kissaten Tostador, Buenos Aires'},
+        {n:'Maison du Pain',ig:'https://www.instagram.com/maison_dupain/',r:'4.8',w:'Café & bakery',q:'Maison du Pain, Buenos Aires'},
+        {n:'Daniel Bakery',r:'4.8',w:'Café & bakery',q:'Daniel Bakery, Buenos Aires'},
+        {n:'The Shelter Coffee',r:'4.7',w:'Several locations (incl. Loreto)',q:'The Shelter Coffee, Buenos Aires'},
+        {n:'Østerbro',r:'4.7',w:'Specialty coffee & kitchen',q:'Østerbro Café de Especialidad, Buenos Aires'},
+        {n:'Hobby',r:'4.7',w:'Specialty coffee',q:'Hobby Café de Especialidad, Buenos Aires'},
+        {n:'Florencia y Fortunata',r:'4.7',w:'Specialty coffee',q:'Florencia y Fortunata Specialty Coffee, Buenos Aires'},
+        {n:'Punto Café',ig:'https://www.instagram.com/somospuntocafe/',r:'4.6',w:'San Telmo',q:'Punto Café San Telmo, Buenos Aires'},
+        {n:'Praline BA',r:'4.6',w:'Espresso bar',q:'Praline BA, Buenos Aires'},
+        {n:'Trece Café',r:'4.5',w:'Coffee shop',q:'Trece Café, Morón 2968, Buenos Aires'},
+        {n:'Café Rotondo',ig:'https://www.instagram.com/rotondocafe/',r:'4.5',w:'Espresso bar',q:'Café Rotondo, Buenos Aires'},
+        {n:'Bulevar',r:'4.5',w:'Espresso bar',q:'Bulevar café, Buenos Aires'},
+        {n:'nano café',r:'4.5',w:'Arcos',q:'nano café Arcos, Buenos Aires'},
+        {n:'Bold Specialty Coffee',web:'https://bold.coffee/en/',r:'4.4',w:'Specialty coffee',q:'Bold Specialty Coffee, Buenos Aires'},
+        {n:'Cora Café',r:'4.4',w:'Espresso bar',q:'Cora Cafe, Buenos Aires'},
+        {n:'Social Corazón',r:'4.4',w:'Coffee shop',pr:'Dishes ARS 21,000–58,000',q:'Social Corazón, Buenos Aires'},
+        {n:'BLANCA',r:'4.3',w:'Espresso bar, two locations',q:'BLANCA café, Buenos Aires'},
+        {n:'Chez Janu',r:'4.3',w:'Espresso bar',q:'Chez Janu, Buenos Aires'}
+      ]},
+      {g:'Bakeries & pastry',items:[
+        {n:'Massa Panadería',r:'4.7',w:'Bakery',q:'Massa panaderia, Buenos Aires'},
+        {n:'Pastelería Labán',r:'4.5',w:'Pastry shop',q:'Pastelería Labán, Buenos Aires'},
+        {n:'Deniks Bakery',r:'4.4',w:'Palermo',q:'Deniks Bakery, Uriarte 1800, Buenos Aires'},
+        {n:'Casa Lharmonie',r:'4.2',w:'Coffee & pastry',q:'casa Lharmonie, Buenos Aires'},
+        {n:'Atelier Fuerza',w:'Palermo · Recoleta · Almagro and more',pr:'$$ (menu not online)',d:'Really good croissants and medialunas. It sells out every day, so go early.',q:'Atelier Fuerza, Nicaragua 6000, Buenos Aires'}
+      ]},
+      {g:'Brunch & long coffees',items:[
+        {n:'Surry Hills',web:'https://surryhillscoffee.com/surry-hills-brunch-palermo/',r:'4.7',w:'Brunch',q:'Surry Hills brunch, Buenos Aires'},
+        {n:'CUADRA',r:'4.5',w:'Restaurant & café',q:'CUADRA restaurant, Buenos Aires'},
+        {n:'Clorindo',r:'4.4',w:'Café & brunch',q:'Clorindo Café Brunch, Buenos Aires'},
+        {n:'Ochava Bar',r:'4.4',w:'Café-bar',q:'Ochava Bar, Buenos Aires'},
+        {n:'Casa Cavia',r:'4.3',w:'Palermo Chico',d:'Michelin-recommended café, bookstore and flower shop in a 1920s mansion, with a terrace and garden out back. Perfect for a long brunch or an elegant merienda with pastries and tea.',q:'Casa Cavia, Cavia 2985, Buenos Aires'},
+        {n:'Café Gutierrez',r:'4.2',w:'Coffee shop',q:'Café Gutierrez, Buenos Aires'},
+        {n:'Presencia Gran Café',r:'4.2',w:'Café & restaurant',d:'Michelin-recommended (2026 guide). A Parisian-style dining room with French technique and Argentine flavors; come for pastries and coffee, or stay for lunch.',q:'Presencia Gran Café, Buenos Aires'},
+        {n:'Quattro Café',r:'4.2',w:'Café',q:'Quattro cafe, Buenos Aires'},
+        {n:'Birkin',fb:'https://www.facebook.com/birkincafe/',r:'4.1',w:'Café',q:'Birkin café, Buenos Aires'},
+        {n:'Como en Casa',r:'4.0',w:'Breakfast',q:'Como en Casa, Buenos Aires'}
+      ]}
+    ]},
+    indian:{label:'Indian & vegetarian',tip:'<p>For when you miss home food. These come from the Embassy of India\'s list of Indian restaurants in Buenos Aires and local food guides. Ratings move a lot, so check the latest Google rating before you go.</p><p><b>Good to know:</b> pizza, empanadas and pasta are everyday food here, so eating without meat is easy. Ask for "sin carne" and check the empanada fillings (humita = corn, verdura = spinach).</p>',groups:[
+      {g:'Indian restaurants in the city',items:[
+        {n:'Taj Mahal',w:'Palermo',d:'Often called the most popular Indian restaurant in the city. Good vegetarian and vegan options.',q:'Taj Mahal restaurante indio, Nicaragua 4345, Buenos Aires'},
+        {n:'Tandoor',ig:'https://www.instagram.com/tandoor_bsas/',w:'Recoleta',d:'Curries and tandoori, with a set lunch menu. Also delivers.',q:'Tandoor restaurante indio, Laprida 1293, Buenos Aires'},
+        {n:'Thali',w:'Palermo',d:'Thali-style plates, good for trying a bit of everything.',q:'Thali restaurante indio, José A. Cabrera 4174, Buenos Aires'},
+        {n:'Mumbai Mahal',w:'Retiro',d:'Downtown option, close to Plaza San Martín.',q:'Mumbai Mahal, Paraguay 428, Buenos Aires'},
+        {n:'Delhi Mahal',web:'https://delhimahal.twupro.com/',w:'Centro',d:'Central location on Avenida Córdoba.',q:'Delhi Mahal, Av. Córdoba 1147, Buenos Aires'},
+        {n:'Namaste India',w:'Corrientes, Centro',d:'On Avenida Corrientes, easy before a show.',q:'Namaste India, Av. Corrientes 1628, Buenos Aires'},
+        {n:'Sabores y Secretos de la India',w:'Belgrano',d:'A small Indian grocery store and kiosk, not a restaurant: stock up on basmati rice, spices, lentils, snacks and other ingredients to cook Indian food at home.',q:'Sabores y Secretos de la India, Ciudad de la Paz 1739, Buenos Aires'},
+        {n:'Gran Dabbang',w:'Palermo',d:'Small, creative Indian-inspired plates. No bookings, so arrive early.',q:'Gran Dabbang, Buenos Aires'}
+      ]},
+      {g:'100% veggie or vegan',items:[
+        {n:'Amador',w:'Villa Crespo',p:'$$',d:'A vegan bodegón: big, comforting plates of pasta and stews.',q:'Amador vegano, Buenos Aires'},
+        {n:'Vegan Fox',w:'Palermo',p:'$',d:'Plant-based burger spot with 11 burgers and vegan nuggets.',q:'Vegan Fox, Buenos Aires'},
+        {n:'Veggie Medio Oriente',w:'Centro · Recoleta · Villa Crespo',p:'$',d:'Falafel and Middle Eastern street food. Filling for little money.',q:'Veggie Medio Oriente, Buenos Aires'},
+        {n:'Mercat Villa Crespo',w:'Villa Crespo',p:'$',d:'Food market with veggie stalls and vegan ice cream. Easy when everyone wants something different.',q:'Mercat Villa Crespo, Thames 747, Buenos Aires'},
+        {n:'Bioma Café',w:'Palermo',p:'$',d:'The first fully vegan café in the city. Plant milks, cakes and sandwiches.',q:'Bioma Café, Buenos Aires'},
+        {n:'Casa Mhia',w:'Almagro',p:'$',d:'Vegan fast food. Get the seitan milanesa sandwich.',q:'Casa Mhia, Perón 3926, Buenos Aires'}
+      ]}
+    ]},
+    parrillas:{label:'Parrillas',tip:'<p><b>What is a parrilla?</b> It\'s both the grill and the restaurant built around it: a big iron grill over wood or charcoal embers, usually in full view. The <i>parrillero</i> cooks the meat slowly, so dinner is never rushed.</p><p><b>How it works:</b> everything is for sharing. Start with provoleta (grilled cheese), chorizo, morcilla (blood sausage) or empanadas, then order a few cuts for the table: bife de chorizo (sirloin), vacío (flank), entraña (skirt steak), asado de tira (short ribs). Add a salad, fries and a bottle of Malbec. A <i>parrillada</i> is a mixed grill that arrives on a small hot grill at your table.</p><p><b>The vibe:</b> casual, loud and family-friendly, close to a <b>bodegón</b>: an old-school neighborhood restaurant with huge portions, waiters who have worked there for decades, and walls full of photos and football shirts. No need to dress up, just go hungry.</p><p><b>Money tip:</b> look for the <b>menú del día / menú ejecutivo</b> at lunch on weekdays: main, drink and sometimes coffee for a fixed price, much cheaper than dinner.</p>',groups:[
+      {g:'Parrillas: local favorites (Google rating)',items:[
+        {n:'La Caprichosa Parrilla',r:'4.7',w:'Recoleta',pr:'ARS 20,000–60,000',d:'My favorite parrilla. Order the milanesa with ñoquis and the bife de chorizo: a show. Perfect for lunch after visiting the Recoleta Cemetery. Book, it fills up fast.',q:'La Caprichosa Parrilla, Azcuénaga 1872, Buenos Aires'},
+        {n:'Maure Parrilla',r:'4.8',w:'Grill',d:'',q:'Maure Parrilla, Buenos Aires'},
+        {n:'Parrilla Peña',r:'4.5',w:'Grill',d:'A classic: almost 9,000 reviews.',q:'Parrilla Peña, Buenos Aires'},
+        {n:'Parrilla SecreTiTo',r:'4.5',w:'Grill',d:'',q:'Parrilla SecreTiTo, Buenos Aires'},
+        {n:'Felisa Parrilla',r:'4.5',w:'Grill',d:'',q:'Felisa Parrilla, Buenos Aires'},
+        {n:'Parrilla Maravilla',r:'4.5',w:'Grill',d:'',q:'Restaurante Parrilla Maravilla, Buenos Aires'},
+        {n:'Corte Comedor',w:'Belgrano',pr:'$$$ (Michelin)',d:'Michelin-recommended parrilla with its own butcher shop next door. Start with the asado croquettes and the provoleta.',q:'Corte Comedor, Av. Olazábal 1391, Buenos Aires'}
+      ]},
+      {g:'More parrillas, budget picks',items:[
+        {n:'Somos Asado',w:'Villa Crespo',p:'$$',d:'Dry-aged meat. Go for the weekday executive lunch, the cheapest way to eat this level of steak.',q:'Somos Asado, Av. Raúl Scalabrini Ortiz 651, Buenos Aires'},
+        {n:'La Boque',w:'Palermo',p:'$$',d:'Lunch menu with main, drink and coffee. At night, 2x1 starters from 5 to 8 pm. Share the costillar.',q:'La Boque, Soler 5101, Buenos Aires'},
+        {n:'Gran Parrilla Lo de Jaime',w:'Palermo',p:'$',d:'Neighborhood parrilla: mixed grill, XXL milanesas and tortilla. Huge portions, made for sharing.',q:'Lo de Jaime, Honduras 4518, Buenos Aires'},
+        {n:'La Dorita',w:'Palermo',p:'$$',d:'Classic corner parrilla with a full set menu (starter, main, dessert, wine). Good for a group dinner.',q:'La Dorita, Humboldt 1892, Buenos Aires'},
+        {n:'Parrilla El Ferroviario',w:'Liniers',p:'$',d:'Founded by railway workers in the 1950s, far from the tourist circuit. Famous for its provoleta.',q:'Parrilla El Ferroviario, Reservistas Argentinos 219, Buenos Aires'}
+      ]},
+      {g:'Bodegones & cantinas (top-ranked classics, huge plates)',items:[
+        {n:'El Obrero',w:'La Boca',p:'$',d:'Open since 1954, walls covered in photos of artists and football players. Tortilla, milanesa and homemade pasta.',q:'Bodegón El Obrero, Agustín R. Caffarena 64, Buenos Aires'},
+        {n:'Bar El Federal',w:'San Telmo',p:'$',d:'Historic bar since 1864 with stained glass and the original counter. Empanadas, house vermouth, big picadas.',q:'Bar El Federal, Carlos Calvo 599, Buenos Aires'},
+        {n:'El Globo',w:'Monserrat',p:'$',d:'Historic classic famous for its puchero. Perfect after walking around Plaza de Mayo.',q:'El Globo, Hipólito Yrigoyen 1199, Buenos Aires'},
+        {n:'La Pipeta',w:'Microcentro',p:'$',d:'Underground spot running since 1961. Giant milanesas and entraña, fast service.',q:'La Pipeta, San Martín 498, Buenos Aires'},
+        {n:'Los Bohemios',w:'Villa Crespo',p:'$',d:'Big portions and football atmosphere, next to the Movistar Arena. Great before a concert.',q:'Los Bohemios, Humboldt 540, Buenos Aires'},
+        {n:'Spiagge di Napoli',w:'Boedo',p:'$',d:'Italian immigrant classic. Pasta with sauce, lasagna and milanesas, very cheap.',q:'Spiagge di Napoli, Av. Independencia 3527, Buenos Aires'},
+        {n:'Pedro Telmo',w:'San Telmo',pr:'Milanesa sandwich ARS 15,000',d:'Bodegón inside the Mercado de San Telmo. Go for the milanesa on pizza bread with fries.',q:'Pedro Telmo, Bolívar 962, Buenos Aires'},
+        {n:'Rioba',r:'4.8',w:'Palermo',pr:'$$ (menu not online)',d:'Checkered tablecloths, waiters in white aprons and big plates of homemade pasta.',q:'Rioba, Costa Rica 4588, Buenos Aires'},
+        {n:'Del Río Cantina',r:'4.6',w:'Saavedra',pr:'$$ (menu not online)',d:'Neighborhood cantina on two floors, with a lunch menu from 12 to 4 PM. Try the mushroom croquettes, gnocchi and cavatelli.',q:'Del Río Cantina, Av. García del Río 2957, Buenos Aires'},
+        {n:'Cantina Recoleta',r:'4.7',w:'Recoleta',pr:'$$ (menu not online)',d:'Bright, classic cantina on Avenida Santa Fe. Good for a group dinner.',q:'Cantina Recoleta, Av. Santa Fe 1430, Buenos Aires'}
+      ]},
+      {g:'Choripán & street food',items:[
+        {n:'Mercado de San Telmo',k:'food-mercado-san-telmo',w:'San Telmo',p:'$',d:'Historic market full of food stalls: choripán, milanesa sandwiches, empanadas. Combine it with the Sunday fair.',q:'Mercado de San Telmo, Buenos Aires'},
+        {n:'El Hornero de San Telmo',w:'San Telmo',p:'$',d:'Empanadas made in front of you inside the market, with spicy sauce on the side.',q:'El Hornero de San Telmo, Mercado de San Telmo'},
+        {n:'Parrilla al paso, Barrio Chino',w:'Belgrano',p:'$',d:'Standing-up choripán in Chinatown. Cheap, fast, then walk the stalls.',q:'Barrio Chino Belgrano, Buenos Aires'}
+      ]}
+    ]},
+    icecream:{label:'Ice cream',tip:'<p>Argentina is an ice cream country: Italian immigrants brought gelato, and <i>heladerías</i> stay open late, even in winter. You order by size (¼, ½ or 1 kg), pick two to four flavors, and dulce de leche is a must.</p><p class="pnote">Prices are approximate, per person, in Argentine pesos (October 2026). They change fast, so check the menu before you go.</p>',groups:[
+      {g:'Ice cream & frozen yogurt',items:[
+        {n:'Lucciano’s',w:'Many locations',d:'Argentine chain born in Mar del Plata, now around the world. Easy to find when you want a quick cone.',q:'Lucciano’s heladería, Buenos Aires'},
+        {n:'Rapanui',w:'Recoleta · Palermo · Retiro',d:'Chocolate shop and heladería in one. Great chocolate ice cream, and leave with a box of bonbons.',q:'Rapanui, Arenales 2302, Buenos Aires'},
+        {n:'Kalo Greek Frozen Yogurt',w:'Palermo Soho',d:'Greek frozen yogurt with toppings, just opened. Open every day from noon to 11:30 PM.',q:'Kalo Greek Frozen Yogurt, Honduras 4775, Buenos Aires'},
+        {n:'Kuono',r:'4.6',w:'Palermo Soho',d:'Small, modern heladería with creative artisanal flavors. Opens at 3 PM.',q:'Heladería Kuono, Gorriti 4812, Buenos Aires'},
+        {n:'Dios Gelato',r:'4.8',w:'Palermo',d:'Bright blue-and-red corner heladería with creamy artisanal gelato and tables on the sidewalk. Go for the dulce de leche.',q:'Dios Gelato, Av. Gral. Las Heras 3800, Buenos Aires'},
+        {n:'Cadore',w:'Av. Corrientes 1695, Centro',d:'Classic artisanal gelato on Avenida Corrientes. Order the dulce de leche.',q:'Heladería Cadore, Av. Corrientes 1695, Buenos Aires'},
+        {n:'Saverio Helados',w:'Av. San Juan 2816',d:'Classic heladería with a bright, modern room and leather booths, good for sitting down with a coffee too.',q:'Saverio Helados, Av. San Juan 2816, Buenos Aires'},
+        {n:'Heladería Scannapieco',w:'Av. Álvarez Thomas 10',d:'Neighborhood heladería. Get a cone with two flavors.',q:'Heladería Scannapieco, Av. Álvarez Thomas 10, Buenos Aires'},
+        {n:'La Bochería',r:'4.9',w:'Colegiales',d:'Small artisanal heladería with a loyal neighborhood following.',q:'La Bochería heladería, Buenos Aires'},
+        {n:'Tino',w:'Caballito',d:'Neighborhood classic open since 1965, a few blocks from Parque Centenario. Try the sambayón or the chocolate mousse.',q:'Heladería Tino, Av. Díaz Vélez 4520, Buenos Aires'},
+        {n:'Gruta',w:'Belgrano',d:'Family heladería since 1976 that still makes everything by hand. Famous for its sambayón and dulce de leche with banana.',q:'Heladería Gruta, Sucre 2356, Buenos Aires'}
+      ]}
+    ]}
+  };
+  var foodChips=document.getElementById('foodChips'),foodBox=document.getElementById('food'),foodTip=document.getElementById('foodTip');
+  function renderFood(k){
+    [].forEach.call(foodChips.children,function(c){c.setAttribute('aria-pressed',c.dataset.k===k?'true':'false')});
+    foodTip.innerHTML=FOOD[k].tip;
+    foodBox.innerHTML=FOOD[k].groups.map(function(g){return '<div class="group"><h3>'+esc(g.g)+'</h3>'+(g.note?'<p class="gnote">'+esc(g.note)+'</p>':'')+'<div class="grid">'+g.items.map(function(it){return card(it,k)}).join('')+'</div></div>'}).join('');
+  }
+  Object.keys(FOOD).forEach(function(k,i){var c=el('button','chip',esc(FOOD[k].label));c.dataset.k=k;c.addEventListener('click',function(){renderFood(k)});foodChips.appendChild(c)});
+  renderFood('restaurants');
+
+  /* ---------- CLUBS ---------- */
+  var CLUBS=[
+    {n:'Caramelo',w:'',q:'Caramelo boliche, Buenos Aires'},
+    {n:'Banana',w:'',q:'Banana boliche, Buenos Aires'},
+    {n:'Costa 7070',w:'',q:'Costa 7070 boliche, Buenos Aires'},
+    {n:'Afrika',w:'',q:'Afrika boliche, Buenos Aires'},
+    {n:'Tequila',w:'',q:'Tequila boliche, Buenos Aires'},
+    {n:'Jet',w:'',q:'Jet boliche, Buenos Aires'},
+    {n:'NonStop',w:'',q:'NonStop boliche, Buenos Aires'}
+  ];
+  var CLUBS2=[
+    {n:'Bayside',w:'',q:'Bayside boliche, Buenos Aires'},
+    {n:'Crobar',w:'',q:'Crobar boliche, Buenos Aires'},
+    {n:'Niceto Club',w:'',q:'Niceto Club boliche, Buenos Aires'},
+    {n:'Palermo Groove',w:'',q:'Palermo Groove boliche, Buenos Aires'},
+    {n:'Museum',w:'',q:'Museum boliche, Buenos Aires'},
+    {n:'Moscú',w:'',q:'Moscú boliche, Buenos Aires'},
+    {n:'Morocco',w:'',q:'Morocco boliche, Buenos Aires'},
+    {n:'Tokio',w:'',q:'Tokio boliche, Buenos Aires'},
+    {n:'Creta',w:'',q:'Creta boliche, Buenos Aires'}
+  ];
+  var BARS=[
+    {n:'Garito Loyola',r:'4.8',w:'Bar',q:'Garito Loyola, Buenos Aires'},
+    {n:'Puerta Uno',r:'4.5',w:'Bar',q:'Puerta Uno Bar, Buenos Aires'},
+    {n:'Don Gato',r:'4.4',w:'Bar',q:'Don Gato bar, Buenos Aires'},
+    {n:'MAUER',r:'4.2',w:'Bar',q:'MAUER Bar, Buenos Aires'}
+  ];
+  document.getElementById('clubs').innerHTML=CLUBS.map(function(it){return card(it,'club')}).join('').replace(/sc-food/g,'sc-night');
+  document.getElementById('clubs2').innerHTML=CLUBS2.map(function(it){return card(it,'club')}).join('').replace(/sc-food/g,'sc-night');
+  document.getElementById('bars').innerHTML=BARS.map(function(it){return card(it,'bar')}).join('').replace(/sc-food/g,'sc-night');
+
+  /* ---------- BARRIOS ---------- */
+  var CITY='105,7 195,52 240,82 262,105 285,127 262,165 210,180 165,202 105,240 90,262 0,180 0,120 45,45';
+  var POLY={belgrano:'110,12 150,28 160,38 140,60 120,55 103,32',palermo:'160,38 195,52 205,62 196,78 205,100 172,102 146,82 140,60',recoleta:'205,62 232,78 248,92 226,96 205,100 196,78',centro:'226,96 248,92 254,100 250,120 232,120 222,112',madero:'254,100 262,105 284,127 270,144 252,140 250,120',santelmo:'232,120 250,120 252,140 234,142',laboca:'234,142 252,140 270,144 262,165 236,168 228,154'};
+  var BARRIOS=[
+    {id:'centro',n:'Centro',full:'Centro & Microcentro',v:'Where the country is run: government, cafés from 1858, theaters and one of the widest avenues in the world.',s:[
+      ['Plaza de Mayo & Casa Rosada','The pink presidential palace and the square where Argentine history happened.','Casa Rosada'],
+      ['Cabildo & Catedral Metropolitana','Colonial town hall and the cathedral where Pope Francis served as archbishop.','Cabildo de Buenos Aires'],
+      ['Avenida Corrientes at night','The classic night plan: see a show at one of the theaters, then grab a slice at Güerrín or Las Cuartetas.','Avenida Corrientes Buenos Aires'],
+      ['Palacio Barolo','Art nouveau building inspired by Dante. Book the guided tour to the top.','Palacio Barolo'],
+      ['Obelisco & Avenida 9 de Julio','The city icon in the middle of a 16-lane avenue. The classic photo.','Obelisco Buenos Aires'],
+      ['Teatro Colón','One of the best opera houses in the world. Guided tours run daily.','Teatro Colón'],
+      ['Café Tortoni','The oldest café in the city, on Avenida de Mayo. Go for café con medialunas.','Café Tortoni']]},
+    {id:'santelmo',n:'San Telmo',full:'San Telmo',v:'The oldest barrio: cobblestones, antiques, tango in the street. Best on Sundays.',s:[
+      ['Feria de San Telmo','Sunday street fair along Calle Defensa: antiques, crafts, music.','Feria de San Telmo'],
+      ['Mercado de San Telmo','1897 iron market with antiques, vintage stalls and food.','Mercado de San Telmo'],
+      ['Plaza Dorrego','The heart of the barrio. Tango dancers in the square on Sundays.','Plaza Dorrego'],
+      ['Mafalda statue','Sit next to Argentina’s most famous comic character, at Defensa and Chile.','Estatua de Mafalda San Telmo'],
+      ['El Zanjón de Granados','Tunnels and ruins under a colonial house. Guided tours only.','El Zanjón de Granados'],
+      ['Parque Lezama','Where many say the city was first founded. Nice walk toward La Boca.','Parque Lezama']]},
+    {id:'laboca',n:'La Boca',full:'La Boca',v:'Colorful tin houses, the birthplace of tango and Boca Juniors. Go during the day.',s:[
+      ['Caminito','The street of painted houses. The most famous photo in Buenos Aires.','Caminito La Boca'],
+      ['La Bombonera','Boca Juniors’ stadium and museum. A must, even if you don’t follow football.','La Bombonera'],
+      ['Usina del Arte','Old power station turned concert hall, often with free events.','Usina del Arte']],safety:'Stay on Caminito and the main tourist streets, go during the day, and come and go by taxi or app.'},
+    {id:'madero',n:'Puerto Madero',full:'Puerto Madero',v:'The old docks turned into the modern skyline. Great for walking and sunsets.',s:[
+      ['Puente de la Mujer','Calatrava’s white footbridge over the dock.','Puente de la Mujer'],
+      ['Fragata Sarmiento','A 19th-century navy ship turned museum.','Fragata Sarmiento'],
+      ['Reserva Ecológica Costanera Sur','Huge nature reserve next to downtown. Walk or bike to the river.','Reserva Ecológica Costanera Sur'],
+      ['Colección Fortabat','Private art collection in a glass building on the docks.','Colección Fortabat']]},
+    {id:'recoleta',n:'Recoleta',full:'Recoleta',v:'The elegant Paris-style barrio: museums, mansions and the most famous cemetery in Latin America.',s:[
+      ['Cementerio de la Recoleta','A city of marble tombs. Find Evita’s.','Cementerio de la Recoleta'],
+      ['Floralis Genérica','Giant steel flower that opens with the sun.','Floralis Genérica'],
+      ['Museo Nacional de Bellas Artes','The national fine arts museum. Free entry.','Museo Nacional de Bellas Artes'],
+      ['El Ateneo Grand Splendid','A 1919 theater turned into one of the most beautiful bookstores in the world.','El Ateneo Grand Splendid']]},
+    {id:'palermo',n:'Palermo',full:'Palermo',v:'Parks by day, bars and boutiques by night. Where you’ll probably live your social life.',s:[
+      ['Bosques de Palermo & Rosedal','Lakes, rose garden and the place to drink mate on a sunny afternoon.','El Rosedal de Palermo'],
+      ['Jardín Japonés','Japanese garden with koi ponds and bridges.','Jardín Japonés Buenos Aires'],
+      ['Jardín Botánico','Free botanical garden full of plants and cats.','Jardín Botánico Carlos Thays'],
+      ['MALBA','Latin American art: Frida Kahlo, Xul Solar, Berni.','MALBA'],
+      ['Palermo Soho','Plaza Serrano, independent shops, street art and bars.','Plaza Serrano Palermo'],
+      ['Planetario','The UFO-shaped planetarium. Great at sunset.','Planetario Galileo Galilei']]},
+    {id:'belgrano',n:'Belgrano',full:'Belgrano',v:'Quiet, green residential barrio with a little Chinatown.',s:[
+      ['Barrio Chino','Asian supermarkets, street food and the dragon arch on Arribeños.','Barrio Chino Belgrano'],
+      ['Barrancas de Belgrano','Hilly park with an outdoor milonga at the bandstand on weekend evenings.','Barrancas de Belgrano']]}
+  ];
+  function mapSVG(id){
+    var b=BARRIOS.filter(function(x){return x.id===id})[0];
+    var shapes=Object.keys(POLY).map(function(k){var on=k===id;return '<polygon points="'+POLY[k]+'" fill="'+(on?'var(--celeste)':'var(--map-land)')+'" stroke="'+(on?'var(--ink)':'var(--map-edge)')+'" stroke-width="'+(on?2:1)+'"/>'}).join('');
+    var pts=POLY[id].split(' ').map(function(p){return p.split(',').map(Number)});
+    var cx=pts.reduce(function(a,p){return a+p[0]},0)/pts.length,cy=pts.reduce(function(a,p){return a+p[1]},0)/pts.length;
+    var lx=Math.min(Math.max(cx-130,6),150),ly=cy+(cy<130?-26:34);
+    return '<svg viewBox="-10 -10 340 290" role="img" aria-label="Map of Buenos Aires with '+esc(b.full)+' highlighted"><rect x="-10" y="-10" width="340" height="290" fill="var(--water)"/><polygon points="'+CITY+'" fill="var(--paper)" stroke="var(--map-edge)" stroke-width="1.5"/>'+shapes+
+      '<circle cx="'+cx+'" cy="'+cy+'" r="4" fill="var(--sun)" stroke="var(--ink)" stroke-width="1.5"/><line x1="'+cx+'" y1="'+cy+'" x2="'+(lx+60)+'" y2="'+(ly-4)+'" stroke="var(--ink)" stroke-width="1"/>'+
+      '<text x="'+lx+'" y="'+ly+'" font-family="Figtree, sans-serif" font-size="15" font-weight="700" fill="var(--ink)">'+esc(b.full)+'</text><text x="300" y="40" text-anchor="end" font-family="Figtree, sans-serif" font-size="11" font-style="italic" fill="var(--muted)">Río de la Plata</text><text x="70" y="140" font-family="Figtree, sans-serif" font-size="11" fill="var(--muted)">CABA</text></svg>';
+  }
+  var chipBox=document.getElementById('barrioChips'),bBox=document.getElementById('barrio');
+  function renderBarrio(id){
+    var b=BARRIOS.filter(function(x){return x.id===id})[0];
+    [].forEach.call(chipBox.children,function(c){c.setAttribute('aria-pressed',c.dataset.b===id?'true':'false')});
+    bBox.innerHTML='<div class="barrio"><div class="mapbox">'+mapSVG(id)+'<div class="mapcap">Schematic map of the city. Highlighted: '+esc(b.full)+'.</div></div><div><h3 class="bname">'+esc(b.full)+'</h3><p class="vibe">'+esc(b.v)+'</p><ul class="sights">'+
+      b.s.map(function(s){return '<li><div class="sthumb ph">'+photo(PH['sight-'+slug(s[0])],s[0])+'</div><b>'+esc(s[0])+'</b><span>'+esc(s[1])+'</span><span class="lk"><a href="'+P(s[2]+' Buenos Aires')+'" target="_blank" rel="noopener">Photos ↗</a><a href="'+M(s[2]+', Buenos Aires')+'" target="_blank" rel="noopener">Map ↗</a></span></li>'}).join('')+
+      '</ul>'+(b.safety?'<p class="safety"><b>Heads up:</b> '+esc(b.safety)+'</p>':'')+'</div></div>';
+  }
+  BARRIOS.forEach(function(b){var c=el('button','chip',esc(b.n));c.dataset.b=b.id;c.addEventListener('click',function(){renderBarrio(b.id)});chipBox.appendChild(c)});
+  renderBarrio('centro');
+
+  /* ---------- TRAVEL ---------- */
+  function stop(s){
+    return '<li><div class="cover ph '+s.sc+'">'+photo(PHL[s.n],s.n)+'<a class="photos" href="'+P(s.ph)+'" target="_blank" rel="noopener">See photos ↗</a><div><small>'+esc(s.region)+'</small><h3>'+esc(s.n)+'</h3></div></div>'+
+      '<div><div class="days">'+esc(s.days)+'</div><h4>'+esc(s.n)+'</h4><p style="margin:0">'+esc(s.d)+'</p><ul>'+s.todo.map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ul>'+
+      '<div class="plinks"><a href="'+M(s.q)+'" target="_blank" rel="noopener">Open in Maps ↗</a><a href="'+P(s.ph)+'" target="_blank" rel="noopener">See photos ↗</a></div></div></li>';
+  }
+  var DEST={
+    south:{label:'Patagonia',html:function(){return '<div class="cover ph big sc-fitz" style="min-height:190px">'+photo(PH['cover-patagonia'],'',true)+'<a class="photos" href="'+P('Patagonia Argentina Fitz Roy')+'" target="_blank" rel="noopener">See photos ↗</a><div><small>The one trip you can’t skip</small><h3>The South: Patagonia</h3></div></div>'+
+      '<div class="dest"><p class="intro">If you travel anywhere in Argentina, make it the South. Glaciers, the Fitz Roy, lakes and the end of the world. The best time is <b>our summer</b>, and the three weeks of break Tetr gives us are perfect for doing it properly. Distances are huge, so fly between stops.</p>'+
+      '<div class="when"><div><b>When</b>Summer break (January–February): long days and the best weather.</div><div><b>How long</b>3 weeks covers the route below comfortably.</div><div><b>Getting around</b>Domestic flights between hubs, buses between nearby towns.</div></div>'+
+      '<ul class="route">'+[
+        {sc:'sc-lakes',region:'Río Negro',n:'Bariloche',days:'Days 1–5',ph:'Bariloche Nahuel Huapi',q:'San Carlos de Bariloche',d:'Lakes and mountains in northern Patagonia, and the chocolate capital of Argentina.',todo:['Circuito Chico by bike or car','Cerro Campanario chairlift for the classic view','Ruta de los 7 Lagos to San Martín de los Andes','Kayak or hike around Nahuel Huapi lake','Chocolate on Calle Mitre']},
+        {sc:'sc-glacier',region:'Santa Cruz',n:'El Calafate',days:'Days 6–9',ph:'Perito Moreno glaciar',q:'El Calafate',d:'Base for the Perito Moreno glacier, one of the few glaciers in the world you can watch breaking into the lake.',todo:['Perito Moreno walkways: wait for an ice wall to collapse','Mini-trekking with crampons on the glacier','Boat trip to Upsala and Spegazzini glaciers']},
+        {sc:'sc-fitz',region:'Santa Cruz',n:'El Chaltén',days:'Days 10–13',ph:'El Chaltén Fitz Roy Laguna de los Tres',q:'El Chaltén',d:'The national trekking capital, 3 hours from El Calafate. Free trails start right from town.',todo:['Laguna de los Tres: sunrise on the Fitz Roy (full day, hard)','Laguna Torre (medium)','Mirador de los Cóndores (short, for the first evening)']},
+        {sc:'sc-ushuaia',region:'Tierra del Fuego',n:'Ushuaia',days:'Days 14–17',ph:'Ushuaia Canal Beagle faro',q:'Ushuaia',d:'The southernmost city in the world, between mountains and the Beagle Channel.',todo:['Boat on the Beagle Channel: sea lions and the lighthouse','Tierra del Fuego National Park','End of the World Train','Hike to Glaciar Martial']},
+        {sc:'sc-whale',region:'Chubut',n:'Puerto Madryn & Península Valdés',days:'Days 18–21',ph:'Península Valdés pingüinos Punta Tombo',q:'Puerto Madryn',d:'Wildlife on the Atlantic coast. Penguins are there in summer, and whales from winter to spring.',todo:['Punta Tombo penguin colony','Península Valdés: sea lions, elephant seals','Snorkel with sea lions at Punta Loma']}
+      ].map(stop).join('')+'</ul></div>'}},
+    north:{label:'The North',html:function(){return '<div class="cover ph big sc-north" style="min-height:190px">'+photo(PH['cover-north'],'',true)+'<a class="photos" href="'+P('Purmamarca Cerro de los Siete Colores')+'" target="_blank" rel="noopener">See photos ↗</a><div><small>Salta & Jujuy</small><h3>The North</h3></div></div>'+
+      '<div class="dest"><p class="intro">Colored mountains, salt flats, Andean villages, empanadas salteñas and folk music. Fly to Salta, rent a car or join tours, and loop up to Jujuy.</p>'+
+      '<div class="when"><div><b>Option 1: Carnival</b>Long weekend in early February 2027. Carnaval in Humahuaca is the most famous in the country.</div><div><b>Option 2: Easter</b>Holy Week long weekend at the end of March 2027. Cooler and calmer.</div><div><b>How long</b>4 to 6 days.</div></div>'+
+      '<ul class="route">'+[
+        {sc:'sc-north',region:'Salta',n:'Salta city',days:'Day 1',ph:'Salta ciudad cerro San Bernardo',q:'Salta, Argentina',d:'Colonial city and base for the trip.',todo:['Cable car to Cerro San Bernardo','MAAM high-altitude archaeology museum','Peña folk music night with empanadas salteñas']},
+        {sc:'sc-wine',region:'Salta',n:'Cafayate',days:'Day 2',ph:'Cafayate Quebrada de las Conchas',q:'Cafayate',d:'High-altitude wine country, reached through the red canyon of Quebrada de las Conchas.',todo:['Garganta del Diablo and Anfiteatro on the way','Torrontés tasting at a bodega']},
+        {sc:'sc-north',region:'Jujuy',n:'Purmamarca & Tilcara',days:'Days 3–4',ph:'Purmamarca Tilcara Quebrada de Humahuaca',q:'Purmamarca',d:'The Quebrada de Humahuaca, a UNESCO World Heritage Site.',todo:['Cerro de los Siete Colores in Purmamarca','Pucará de Tilcara ruins','Humahuaca town and its monument']},
+        {sc:'sc-salt',region:'Jujuy',n:'Salinas Grandes',days:'Day 5',ph:'Salinas Grandes Jujuy',q:'Salinas Grandes, Jujuy',d:'White salt flats at over 3,400 m.',todo:['Perspective photos on the salt flats']},
+        {sc:'sc-north',region:'Jujuy',n:'Serranía de Hornocal',days:'Day 5',ph:'Serranía de Hornocal',q:'Serranía de Hornocal, Jujuy',d:'The 14-colored mountain.',todo:['Serranía de Hornocal at sunset (from Humahuaca)']}
+      ].map(stop).join('')+'</ul></div>'}},
+    iguazu:{label:'Iguazú Falls',html:function(){return '<ul class="route">'+stop({sc:'sc-iguazu',region:'Misiones',n:'Iguazú Falls',days:'Long weekend · 2–3 days',ph:'Cataratas del Iguazú Garganta del Diablo',q:'Parque Nacional Iguazú',d:'One of the New 7 Wonders of Nature: around 275 waterfalls in the jungle on the border with Brazil. A UNESCO World Heritage Site. Fly from Buenos Aires in under 2 hours.',todo:['Garganta del Diablo: the walkway over the biggest fall','Upper and Lower circuits on the Argentine side','Gran Aventura boat ride under the falls (you will get soaked)','Brazilian side for the panoramic view','Hito Tres Fronteras at sunset: Argentina, Brazil and Paraguay']})+'</ul>'}},
+    mendoza:{label:'Mendoza',html:function(){return '<ul class="route">'+stop({sc:'sc-wine',region:'Cuyo',n:'Mendoza: the wine experience',days:'Long weekend · 3–4 days',ph:'Mendoza viñedos Andes',q:'Mendoza, Argentina',d:'Malbec country at the foot of the Andes. Go in early March for the Fiesta Nacional de la Vendimia, the grape harvest festival with parades and a huge show.',todo:['Bike & wine in Maipú: rent bikes and ride between bodegas','Luján de Cuyo for classic Malbec wineries','Valle de Uco for the views of the Andes (book a lunch)','Aconcagua Park viewpoint: the highest mountain in the Americas','Rafting in Potrerillos and hot springs at Cacheuta']})+'</ul>'}},
+    rosario:{label:'Rosario, my city',html:function(){return '<div class="cover ph big sc-rosario" style="min-height:190px">'+photo(PH['cover-rosario'],'',true)+'<a class="photos" href="'+P('Rosario Monumento a la Bandera')+'" target="_blank" rel="noopener">See photos ↗</a><div><small>Santa Fe · About 3 hours from Buenos Aires</small><h3>Rosario, my city</h3></div></div>'+
+      '<div class="letter"><p>This one is personal. Rosario is where I’m from, and I would love to host you and show you my city.</p><p>It is the birthplace of the flag, the capital of artisanal ice cream, a city on the Paraná river with islands right in front, and of course, the city of the greatest of all: Lionel Messi.</p><p class="sig">— Mia</p></div>'+
+      '<ul class="route">'+[
+        {sc:'sc-rosario',region:'Centro',n:'Monumento a la Bandera',days:'Must',ph:'Monumento a la Bandera Rosario',q:'Monumento a la Bandera, Rosario',d:'The national flag memorial, on the river.',todo:['Climb the tower for the view of the river and the city','Walk there along Peatonal Córdoba']},
+        {sc:'sc-rosario',region:'All over the city',n:'Messi’s Rosario',days:'Must',ph:'mural Messi Rosario',q:'Mural Messi, Rosario',d:'The city that made Messi.',todo:['Selfie at the giant Messi mural near the Monumento','Follow the Messi murals circuit in the Rosario Turismo app','Newell’s Old Boys stadium, his childhood club']},
+        {sc:'sc-lakes',region:'Paraná river',n:'The Costanera & the islands',days:'Summer favorite',ph:'Rosario costanera islas Paraná',q:'Costanera Rosario',d:'The riverside is the heart of summer in Rosario.',todo:['Walk Parque España, Parque Urquiza and Puerto Norte','Boat to the islands: beach bars, volleyball, asado','Sunset with mate on the costanera']},
+        {sc:'sc-food',region:'Food',n:'Eat like a rosarino',days:'Must',ph:'helado artesanal Rosario',q:'Mercado Pichincha, Rosario',d:'Rosario is known as the capital of artisanal ice cream.',todo:['Helado artesanal (we’ll do a tasting tour)','A carlito, the local toasted sandwich','River fish at the costanera and bars at Mercado Pichincha']}
+      ].map(stop).join('')+'</ul>'}}
+  };
+  var destChips=document.getElementById('destChips'),destBox=document.getElementById('dest');
+  function renderDest(k){
+    [].forEach.call(destChips.children,function(c){c.setAttribute('aria-pressed',c.dataset.k===k?'true':'false')});
+    destBox.innerHTML=DEST[k].html();
+  }
+  Object.keys(DEST).forEach(function(k){var c=el('button','chip big',esc(DEST[k].label));c.dataset.k=k;c.addEventListener('click',function(){renderDest(k)});destChips.appendChild(c)});
+  renderDest('south');
+
+  var nc=document.getElementById('nightCover');nc.insertAdjacentHTML('afterbegin',photo(PH['cover-night'],''));
+  /* Tap a photo to show its credit on touch screens */
+  document.addEventListener('click',function(e){if(e.target.tagName==='IMG'&&e.target.parentNode.classList.contains('ph'))e.target.parentNode.classList.toggle('show')});
+
+  /* ---------- BA sub-sections ---------- */
+  var baChips=[].slice.call(document.querySelectorAll('[data-ba]'));
+  baChips.forEach(function(b){b.addEventListener('click',function(){
+    baChips.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');document.getElementById('ba-'+x.dataset.ba).hidden=x!==b});
+  })});
+
+  /* ---------- Tabs ---------- */
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function show(t){
+    if(['ba','travel','apps'].indexOf(t)<0)t='ba';
+    tabs.forEach(function(x){var on=x.dataset.t===t;x.setAttribute('aria-selected',on?'true':'false');document.getElementById(x.dataset.t).hidden=!on});
+  }
+  tabs.forEach(function(x){x.addEventListener('click',function(){show(x.dataset.t);try{history.replaceState(null,'','#'+x.dataset.t)}catch(e){}})});
+  show((location.hash||'').slice(1));
+  /* Hero links: switch tab, then scroll to the tabs */
+  [].forEach.call(document.querySelectorAll('[data-go]'),function(a){a.addEventListener('click',function(e){
+    e.preventDefault();var t=document.getElementById('tab-'+a.dataset.go);if(t)t.click();
+    document.querySelector(a.getAttribute('href')==='#explore'?'#explore':'.tabs-shell').scrollIntoView({behavior:'smooth'});
+  })});
+})();
+</script>
+
+</body></html>
